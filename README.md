@@ -7,7 +7,7 @@ Designed for consumption by [react-bull](https://github.com/keyvanfatehi/react-b
 
 ### Usage
 
-`npm install --save react-bull`
+`npm install --save express-bull`
 
 ```js
 var redis = require('redis');
