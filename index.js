@@ -39,5 +39,13 @@ module.exports = function (config) {
     }).error(next).catch(next)
   });
 
+  router.route('/delete/status/:type')
+  .get(function (req, res, next) {
+    var type = req.params.type
+    redisModel.deleteJobByStatus(type).then(function(results){
+      res.json(results);
+    }).error(next).catch(next)
+  });
+
   return router;
 }
